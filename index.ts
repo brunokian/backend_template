@@ -1,5 +1,4 @@
-import express, { Request, Response} from 'express';
-import statusCodes from './statusCodes';
+import express, { Request, Response } from 'express';
 
 const app = express();
 
@@ -8,7 +7,7 @@ app.use(express.json());
 const PORT = 8000;
 
 app.get('/', (_req: Request, res: Response) => {
-  res.status(statusCodes.OK).send('Express + TypeScript');
+    res.status(200).send('Express + TypeScript')
 });
 
 app.listen(PORT, () => {
